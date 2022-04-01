@@ -38,9 +38,12 @@ header{
 .background-video{
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     position: fixed;
     z-index: -1;
+}
+.background-video img{
+    
 }
 .content{
     max-width: 1200px;
@@ -107,4 +110,27 @@ span{
 .planet-item-header{
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 600px){
+    .planets{
+        flex-direction: column;
+    }
+    .nav{
+        display: none;
+    }
+    .content{
+        margin: 0px 20px;
+    }
+    .content h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .content p{
+        max-width: 100%;
+    }
+    .planets{
+        margin: 20px 20px;
+        gap: 20px;
+    }
 }
